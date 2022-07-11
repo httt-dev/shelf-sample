@@ -32,8 +32,10 @@ const Book = ({ dlm_rfid_cd, dpp_id, dpp_isbn, dpp_product_name, dpp_rfid_cd, dp
             </div>
             <div className="book-info">
                 <h3>{dpp_product_name}</h3>
-                <h3>{dlm_rfid_cd}</h3>
-                <span className="book-status">{shelf_status}</span>
+                <h3>{dpp_rfid_cd}</h3>
+                {(shelf_status == 'IN') && <span className="book-status-in">{shelf_status}</span>}
+                {(shelf_status == 'OUT') && <span className="book-status-out">{shelf_status}</span>}
+                {(shelf_status == '') && <span className="book-status">{shelf_status}</span>}
             </div>
         </div>
     )

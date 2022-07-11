@@ -5,7 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #22254b;
+  background-color: #1f2937;
 }
 
 * {
@@ -26,11 +26,17 @@ code {
 
 .book {
   margin: 1rem;
-  width: 300px;
-  background-color: #373b69;
+  width: 350px;
+  background-color: #374151;
   border-radius: 4px;
   box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
   overflow: hidden;
+  transition: .5s;
+}
+
+.book:hover {
+  transform: scale(0.95);
+  background-color: rgba(75, 85, 99, 0.8);
 }
 
 .book-cover {
@@ -43,6 +49,7 @@ code {
 .book img {
   max-width: 100%;
   width: 250px;
+  border-radius: 4px;
 }
 
 .book-info {
@@ -55,8 +62,14 @@ code {
   color: aliceblue;
 }
 
-.book-status {
-  color: bisque;
+.book-status-in {
+  color: yellow;
+  font-size: 2rem;
+
+}
+
+.book-status-out {
+  color: darkorange;
   font-size: 2rem;
 
 }
